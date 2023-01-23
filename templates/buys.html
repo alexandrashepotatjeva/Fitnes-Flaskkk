@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock%}
+
+{% block body %}
+<header id="masthead" class="site-header container" role="banner">
+		<div class="site-branding">
+			<h1 class="site-title text-center"><a>Услуги</a></h1>
+        </div>
+</header>
+<body>
+{% for el in data %}
+    <div class="card_service">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" bis_skin_checked="1">
+      <div class="col" bis_skin_checked="1">
+        <div class="card mb-2 rounded-3 shadow-sm" bis_skin_checked="1">
+          <div class="card-header py-3" bis_skin_checked="1">
+            <h4 class="my-0 fw-normal">{{el.title}}</h4>
+          </div>
+          <div class="card-body" bis_skin_checked="1">
+            <h1 class="card-title pricing-card-title">{{el.price}}<small class="text-muted fw-light">руб</small></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+{% endfor %}
+</div>
+</body>
+{% endblock%}
